@@ -164,7 +164,6 @@ class curr_src {
     this.ele_code = 2;
   }
 }
-
 class volt_src {
   constructor(
     id,
@@ -191,229 +190,230 @@ class volt_src {
   }
 }
 
-class volt_cont_curr_src {
-  constructor(
-    id,
-    label_id,
-    inp_port_id,
-    out_port_id,
-    label,
-    node_k,
-    node_l,
-    cont_high_node,
-    cont_low_node,
-    node_m,
-    node_n,
+// class volt_cont_curr_src {
+//   constructor(
+//     id,
+//     label_id,
+//     inp_port_id,
+//     out_port_id,
+//     label,
+//     node_k,
+//     node_l,
+//     cont_high_node,
+//     cont_low_node,
+//     node_m,
+//     node_n,
 
-    ele_code
-  ) {
-    this.id = id;
-    this.label_id = label_id;
-    this.inp_port_id = inp_port_id;
-    // ## Here inp_port is the low
-    this.out_port_id = out_port_id;
-    // ## Here out_port is the high
-    this.label = label;
-    this.node_k = node_k;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.node_l = node_l;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.cont_high_node = cont_high_node;
-    this.cont_low_node = cont_low_node;
-    this.node_m = node_m;
-    this.node_n = node_n;
-    this.m_changed = 0;
-    this.n_changed = 0;
-    this.ele_code = 4;
-  }
-}
+//     ele_code
+//   ) {
+//     this.id = id;
+//     this.label_id = label_id;
+//     this.inp_port_id = inp_port_id;
+//     // ## Here inp_port is the low
+//     this.out_port_id = out_port_id;
+//     // ## Here out_port is the high
+//     this.label = label;
+//     this.node_k = node_k;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.node_l = node_l;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.cont_high_node = cont_high_node;
+//     this.cont_low_node = cont_low_node;
+//     this.node_m = node_m;
+//     this.node_n = node_n;
+//     this.m_changed = 0;
+//     this.n_changed = 0;
+//     this.ele_code = 4;
+//   }
+// }
 
-class volt_cont_volt_src {
-  constructor(
-    id,
-    label_id,
-    inp_port_id,
-    out_port_id,
-    label,
-    node_k,
-    node_l,
-    cont_high_node,
-    cont_low_node,
-    node_m,
-    node_n,
+// class volt_cont_volt_src {
+//   constructor(
+//     id,
+//     label_id,
+//     inp_port_id,
+//     out_port_id,
+//     label,
+//     node_k,
+//     node_l,
+//     cont_high_node,
+//     cont_low_node,
+//     node_m,
+//     node_n,
 
-    ele_code
-  ) {
-    this.id = id;
-    this.label_id = label_id;
-    this.inp_port_id = inp_port_id;
-    // ## Here inp_port is the low
-    this.out_port_id = out_port_id;
-    // ## Here out_port is the high
-    this.label = label;
-    this.node_k = node_k;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.node_l = node_l;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.cont_high_node = cont_high_node;
-    this.cont_low_node = cont_low_node;
-    this.node_m = node_m;
-    this.node_n = node_n;
-    this.m_changed = 0;
-    this.n_changed = 0;
-    this.ele_code = 5;
-  }
-}
+//     ele_code
+//   ) {
+//     this.id = id;
+//     this.label_id = label_id;
+//     this.inp_port_id = inp_port_id;
+//     // ## Here inp_port is the low
+//     this.out_port_id = out_port_id;
+//     // ## Here out_port is the high
+//     this.label = label;
+//     this.node_k = node_k;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.node_l = node_l;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.cont_high_node = cont_high_node;
+//     this.cont_low_node = cont_low_node;
+//     this.node_m = node_m;
+//     this.node_n = node_n;
+//     this.m_changed = 0;
+//     this.n_changed = 0;
+//     this.ele_code = 5;
+//   }
+// }
 
-class curr_cont_curr_src_gen {
-  constructor(
-    id,
-    label_id,
-    inp_port_id,
-    out_port_id,
-    label,
-    node_k,
-    node_l,
-    cont_high_node,
-    cont_low_node,
-    node_m,
-    node_n,
+// class curr_cont_curr_src_gen {
+//   constructor(
+//     id,
+//     label_id,
+//     inp_port_id,
+//     out_port_id,
+//     label,
+//     node_k,
+//     node_l,
+//     cont_high_node,
+//     cont_low_node,
+//     node_m,
+//     node_n,
 
-    ele_code
-  ) {
-    this.id = id;
-    this.label_id = label_id;
-    this.inp_port_id = inp_port_id;
-    // ## Here inp_port is the low
-    this.out_port_id = out_port_id;
-    // ## Here out_port is the high
-    this.label = label;
-    this.node_k = node_k;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.node_l = node_l;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.cont_high_node = cont_high_node;
-    this.cont_low_node = cont_low_node;
-    this.node_m = node_m;
-    this.node_n = node_n;
-    this.m_changed = 0;
-    this.n_changed = 0;
-    this.ele_code = 6;
-  }
-}
+//     ele_code
+//   ) {
+//     this.id = id;
+//     this.label_id = label_id;
+//     this.inp_port_id = inp_port_id;
+//     // ## Here inp_port is the low
+//     this.out_port_id = out_port_id;
+//     // ## Here out_port is the high
+//     this.label = label;
+//     this.node_k = node_k;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.node_l = node_l;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.cont_high_node = cont_high_node;
+//     this.cont_low_node = cont_low_node;
+//     this.node_m = node_m;
+//     this.node_n = node_n;
+//     this.m_changed = 0;
+//     this.n_changed = 0;
+//     this.ele_code = 6;
+//   }
+// }
 
-class curr_cont_curr_src_vs {
-  constructor(
-    id,
-    label_id,
-    inp_port_id,
-    out_port_id,
-    label,
-    node_k,
-    node_l,
-    cont_high_node,
-    cont_low_node,
-    node_m,
-    node_n,
+// class curr_cont_curr_src_vs {
+//   constructor(
+//     id,
+//     label_id,
+//     inp_port_id,
+//     out_port_id,
+//     label,
+//     node_k,
+//     node_l,
+//     cont_high_node,
+//     cont_low_node,
+//     node_m,
+//     node_n,
 
-    ele_code
-  ) {
-    this.id = id;
-    this.label_id = label_id;
-    this.inp_port_id = inp_port_id;
-    // ## Here inp_port is the low
-    this.out_port_id = out_port_id;
-    // ## Here out_port is the high
-    this.label = label;
-    this.node_k = node_k;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.node_l = node_l;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.cont_high_node = cont_high_node;
-    this.cont_low_node = cont_low_node;
-    this.node_m = node_m;
-    this.node_n = node_n;
-    this.m_changed = 0;
-    this.n_changed = 0;
-    this.ele_code = 7;
-  }
-}
+//     ele_code
+//   ) {
+//     this.id = id;
+//     this.label_id = label_id;
+//     this.inp_port_id = inp_port_id;
+//     // ## Here inp_port is the low
+//     this.out_port_id = out_port_id;
+//     // ## Here out_port is the high
+//     this.label = label;
+//     this.node_k = node_k;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.node_l = node_l;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.cont_high_node = cont_high_node;
+//     this.cont_low_node = cont_low_node;
+//     this.node_m = node_m;
+//     this.node_n = node_n;
+//     this.m_changed = 0;
+//     this.n_changed = 0;
+//     this.ele_code = 7;
+//   }
+// }
 
-class curr_cont_volt_src_gen {
-  constructor(
-    id,
-    label_id,
-    inp_port_id,
-    out_port_id,
-    label,
-    node_k,
-    node_l,
-    cont_high_node,
-    cont_low_node,
-    node_m,
-    node_n,
+// class curr_cont_volt_src_gen {
+//   constructor(
+//     id,
+//     label_id,
+//     inp_port_id,
+//     out_port_id,
+//     label,
+//     node_k,
+//     node_l,
+//     cont_high_node,
+//     cont_low_node,
+//     node_m,
+//     node_n,
 
-    ele_code
-  ) {
-    this.id = id;
-    this.label_id = label_id;
-    this.inp_port_id = inp_port_id;
-    // ## Here inp_port is the low
-    this.out_port_id = out_port_id;
-    // ## Here out_port is the high
-    this.label = label;
-    this.node_k = node_k;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.node_l = node_l;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.cont_high_node = cont_high_node;
-    this.cont_low_node = cont_low_node;
-    this.node_m = node_m;
-    this.node_n = node_n;
-    this.m_changed = 0;
-    this.n_changed = 0;
-    this.ele_code = 8;
-  }
-}
+//     ele_code
+//   ) {
+//     this.id = id;
+//     this.label_id = label_id;
+//     this.inp_port_id = inp_port_id;
+//     // ## Here inp_port is the low
+//     this.out_port_id = out_port_id;
+//     // ## Here out_port is the high
+//     this.label = label;
+//     this.node_k = node_k;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.node_l = node_l;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.cont_high_node = cont_high_node;
+//     this.cont_low_node = cont_low_node;
+//     this.node_m = node_m;
+//     this.node_n = node_n;
+//     this.m_changed = 0;
+//     this.n_changed = 0;
+//     this.ele_code = 8;
+//   }
+// }
 
-class curr_cont_volt_src_vs {
-  constructor(
-    id,
-    label_id,
-    inp_port_id,
-    out_port_id,
-    label,
-    node_k,
-    node_l,
-    cont_high_node,
-    cont_low_node,
-    node_m,
-    node_n,
+// class curr_cont_volt_src_vs {
+//   constructor(
+//     id,
+//     label_id,
+//     inp_port_id,
+//     out_port_id,
+//     label,
+//     node_k,
+//     node_l,
+//     cont_high_node,
+//     cont_low_node,
+//     node_m,
+//     node_n,
 
-    ele_code
-  ) {
-    this.id = id;
-    this.label_id = label_id;
-    this.inp_port_id = inp_port_id;
-    // ## Here inp_port is the low
-    this.out_port_id = out_port_id;
-    // ## Here out_port is the high
-    this.label = label;
-    this.node_k = node_k;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.node_l = node_l;
-    // ## The final node numbers to be used directly in our version 1 algo
-    this.cont_high_node = cont_high_node;
-    this.cont_low_node = cont_low_node;
-    this.node_m = node_m;
-    this.node_n = node_n;
-    this.m_changed = 0;
-    this.n_changed = 0;
-    this.ele_code = 9;
-  }
-}
+//     ele_code
+//   ) {
+//     this.id = id;
+//     this.label_id = label_id;
+//     this.inp_port_id = inp_port_id;
+//     // ## Here inp_port is the low
+//     this.out_port_id = out_port_id;
+//     // ## Here out_port is the high
+//     this.label = label;
+//     this.node_k = node_k;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.node_l = node_l;
+//     // ## The final node numbers to be used directly in our version 1 algo
+//     this.cont_high_node = cont_high_node;
+//     this.cont_low_node = cont_low_node;
+//     this.node_m = node_m;
+//     this.node_n = node_n;
+//     this.m_changed = 0;
+//     this.n_changed = 0;
+//     this.ele_code = 9;
+//   }
+// }
 
 // Function for return element type from id
+
 function ret_type_from_id(id) {
   return element_type_list[element_id_list.indexOf(id)];
 }
