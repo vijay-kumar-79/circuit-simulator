@@ -451,67 +451,68 @@ function ret_source_target_nodes_from_id(id, port_type) {
         }
       }
     }
-  } else if (ele_type == "VCCS") {
-    for (var i = 0; i < vccs_list.length; i++) {
-      if (vccs_list[i].id == id) {
-        if (port_type == "hybrid0") {
-          return vccs_list[i].inp_port_id;
-        } else if (port_type == "hybrid1") {
-          return vccs_list[i].out_port_id;
-        }
-      }
-    }
-  } else if (ele_type == "VCVS") {
-    for (var i = 0; i < vcvs_list.length; i++) {
-      if (vcvs_list[i].id == id) {
-        if (port_type == "hybrid0") {
-          return vcvs_list[i].inp_port_id;
-        } else if (port_type == "hybrid1") {
-          return vcvs_list[i].out_port_id;
-        }
-      }
-    }
-  } else if (ele_type == "CCCS_Gen") {
-    for (var i = 0; i < cccs_gen_list.length; i++) {
-      if (cccs_gen_list[i].id == id) {
-        if (port_type == "hybrid0") {
-          return cccs_gen_list[i].inp_port_id;
-        } else if (port_type == "hybrid1") {
-          return cccs_gen_list[i].out_port_id;
-        }
-      }
-    }
-  } else if (ele_type == "CCCS_Vs") {
-    for (var i = 0; i < cccs_vs_list.length; i++) {
-      if (cccs_vs_list[i].id == id) {
-        if (port_type == "hybrid0") {
-          return cccs_vs_list[i].inp_port_id;
-        } else if (port_type == "hybrid1") {
-          return cccs_vs_list[i].out_port_id;
-        }
-      }
-    }
-  } else if (ele_type == "CCVS_Gen") {
-    for (var i = 0; i < ccvs_gen_list.length; i++) {
-      if (ccvs_gen_list[i].id == id) {
-        if (port_type == "hybrid0") {
-          return ccvs_gen_list[i].inp_port_id;
-        } else if (port_type == "hybrid1") {
-          return ccvs_gen_list[i].out_port_id;
-        }
-      }
-    }
-  } else if (ele_type == "CCVS_Vs") {
-    for (var i = 0; i < ccvs_vs_list.length; i++) {
-      if (ccvs_vs_list[i].id == id) {
-        if (port_type == "hybrid0") {
-          return ccvs_vs_list[i].inp_port_id;
-        } else if (port_type == "hybrid1") {
-          return ccvs_vs_list[i].out_port_id;
-        }
-      }
-    }
-  }
+  } 
+  // else if (ele_type == "VCCS") {
+  //   for (var i = 0; i < vccs_list.length; i++) {
+  //     if (vccs_list[i].id == id) {
+  //       if (port_type == "hybrid0") {
+  //         return vccs_list[i].inp_port_id;
+  //       } else if (port_type == "hybrid1") {
+  //         return vccs_list[i].out_port_id;
+  //       }
+  //     }
+  //   }
+  // } else if (ele_type == "VCVS") {
+  //   for (var i = 0; i < vcvs_list.length; i++) {
+  //     if (vcvs_list[i].id == id) {
+  //       if (port_type == "hybrid0") {
+  //         return vcvs_list[i].inp_port_id;
+  //       } else if (port_type == "hybrid1") {
+  //         return vcvs_list[i].out_port_id;
+  //       }
+  //     }
+  //   }
+  // } else if (ele_type == "CCCS_Gen") {
+  //   for (var i = 0; i < cccs_gen_list.length; i++) {
+  //     if (cccs_gen_list[i].id == id) {
+  //       if (port_type == "hybrid0") {
+  //         return cccs_gen_list[i].inp_port_id;
+  //       } else if (port_type == "hybrid1") {
+  //         return cccs_gen_list[i].out_port_id;
+  //       }
+  //     }
+  //   }
+  // } else if (ele_type == "CCCS_Vs") {
+  //   for (var i = 0; i < cccs_vs_list.length; i++) {
+  //     if (cccs_vs_list[i].id == id) {
+  //       if (port_type == "hybrid0") {
+  //         return cccs_vs_list[i].inp_port_id;
+  //       } else if (port_type == "hybrid1") {
+  //         return cccs_vs_list[i].out_port_id;
+  //       }
+  //     }
+  //   }
+  // } else if (ele_type == "CCVS_Gen") {
+  //   for (var i = 0; i < ccvs_gen_list.length; i++) {
+  //     if (ccvs_gen_list[i].id == id) {
+  //       if (port_type == "hybrid0") {
+  //         return ccvs_gen_list[i].inp_port_id;
+  //       } else if (port_type == "hybrid1") {
+  //         return ccvs_gen_list[i].out_port_id;
+  //       }
+  //     }
+  //   }
+  // } else if (ele_type == "CCVS_Vs") {
+  //   for (var i = 0; i < ccvs_vs_list.length; i++) {
+  //     if (ccvs_vs_list[i].id == id) {
+  //       if (port_type == "hybrid0") {
+  //         return ccvs_vs_list[i].inp_port_id;
+  //       } else if (port_type == "hybrid1") {
+  //         return ccvs_vs_list[i].out_port_id;
+  //       }
+  //     }
+  //   }
+  // }
 }
 function return_node_num_from_port_id(port_id) {
   for (var i = 0; i < nodes_list.length; i++) {
@@ -541,12 +542,12 @@ function nodeGenerate() {
   resistor_list = [];
   curr_src_list = [];
   volt_src_list = [];
-  vccs_list = [];
-  vcvs_list = [];
-  cccs_gen_list = [];
-  cccs_vs_list = [];
-  ccvs_gen_list = [];
-  ccvs_vs_list = [];
+  // vccs_list = [];
+  // vcvs_list = [];
+  // cccs_gen_list = [];
+  // cccs_vs_list = [];
+  // ccvs_gen_list = [];
+  // ccvs_vs_list = [];
 
   connection_list = [];
   element_id_list = [];
